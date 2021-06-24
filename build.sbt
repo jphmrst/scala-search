@@ -24,7 +24,8 @@ licenses += (
   url("https://github.com/jphmrst/ScalaUtils/blob/master/LICENSE.txt"))
 publishMavenStyle := true
 
-// disable publishw ith scala version, otherwise artifact name will include scala version
+// disable publish with scala version, otherwise artifact name will
+// include scala version
 // e.g cassper_2.11
 crossPaths := false
 
@@ -58,8 +59,6 @@ lazy val utils = RootProject(file("/home/jm/Lib/Scala/Utils"))
 lazy val main = project
   .in(file("."))
   .settings(
-    name := "Maraist Utils",
-    version := "1.0.0",
     scalaVersion := scala3Version,
     compile / watchTriggers += baseDirectory.value.toGlob / "build.sbt",
     unmanagedSources / excludeFilter := ".#*",
